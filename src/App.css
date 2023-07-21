@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+.app {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: var(--surface-surface-secondary, #f7f9fa);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.image {
+  padding: 104px 0px 200px 80px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.column {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  padding-left: 129px;
+}
+
+.container {
+  display: flex;
+  padding: var(--space-spacing-xh, 208px) var(--space-spacing-hg, 80px)
+    var(--space-spacing-none, 0px) var(--space-spacing-none, 0px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+
+  transition: opacity 0.2s ease;
+}
+
+.container.active {
+  opacity: 1;
+}
+
+.container.inactive {
+  display: none;
+}
+
+.title {
+  color: var(--text-text-primary, #050505);
+
+  /* Desktop/Body/Mid - 24px */
+  font-family: Be Vietnam Pro;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -1.2px;
+  padding-bottom: 24px;
+}
+
+.text {
+  color: var(--text-text-primary, #050505);
+
+  /* Desktop/Body/Small - 16px */
+  font-family: Be Vietnam Pro;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 137.5% */
+  letter-spacing: -0.8px;
+}
+
+.button {
+  display: flex;
+  padding: var(--space-spacing-sm, 16px) var(--space-spacing-none, 0px)
+    var(--space-spacing-2-xs, 8px) var(--space-spacing-none, 0px);
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  align-self: stretch;
+  border-bottom: 0.8px solid var(--border-border-primary, #050505);
+  width: 305px;
 }
